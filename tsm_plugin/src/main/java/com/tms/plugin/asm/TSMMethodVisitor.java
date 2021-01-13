@@ -21,7 +21,6 @@ public class TSMMethodVisitor extends AdviceAdapter {
         if (!inject) {
             return;
         }
-        System.out.println("tsm Processing：" + getName());
         visitorChildThread();
     }
 
