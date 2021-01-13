@@ -1,4 +1,4 @@
-package com.tms.threadswitch.tsm_plugin.asm;
+package com.tms.plugin.asm;
 
 import org.objectweb.asm.*;
 

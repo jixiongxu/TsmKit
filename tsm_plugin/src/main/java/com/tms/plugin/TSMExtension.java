@@ -1,4 +1,4 @@
-package com.tms.threadswitch.tsm_plugin;
+package com.tms.plugin;
 
 public class TSMExtension {
 

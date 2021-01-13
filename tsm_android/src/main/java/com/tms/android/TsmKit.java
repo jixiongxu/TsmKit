@@ -1,4 +1,4 @@
-package com.tms.threadswitch.tsm_android;
+package com.tms.android;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

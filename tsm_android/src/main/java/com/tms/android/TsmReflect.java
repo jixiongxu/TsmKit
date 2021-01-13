@@ -1,4 +1,4 @@
-package com.tms.threadswitch.tsm_android;
+package com.tms.android;
 
 import android.os.Handler;
 import android.os.Looper;

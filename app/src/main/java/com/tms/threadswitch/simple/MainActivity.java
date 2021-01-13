@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.tms.threadswitch.tsm_android.TsmKit;
+import com.tms.android.TsmKit;
 
 public class MainActivity extends AppCompatActivity {
 

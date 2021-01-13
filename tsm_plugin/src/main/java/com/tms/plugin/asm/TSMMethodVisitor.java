@@ -1,4 +1,4 @@
-package com.tms.threadswitch.tsm_plugin.asm;
+package com.tms.plugin.asm;
 
 import org.objectweb.asm.*;
 import org.objectweb.asm.commons.AdviceAdapter;
@@ -67,7 +67,7 @@ public class TSMMethodVisitor extends AdviceAdapter {
         mv.visitVarInsn(ALOAD, 0);//this
         mv.visitVarInsn(ALOAD, methodName); //
         mv.visitVarInsn(ALOAD, argumentTypesObject);
-        mv.visitMethodInsn(INVOKESTATIC, "com/tms/threadswitch/tsm_android/TsmReflect", isMainThread ? "invokeMain" : "invokeChild", "(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V", false);
+        mv.visitMethodInsn(INVOKESTATIC, "com/tms/android/TsmReflect", isMainThread ? "invokeMain" : "invokeChild", "(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V", false);
         mv.visitInsn(RETURN);
         mv.visitLabel(l1);
         mv.visitFrame(Opcodes.F_NEW, 0, null, 0, null);
@@ -80,7 +80,7 @@ public class TSMMethodVisitor extends AdviceAdapter {
 
     @Override
     public AnnotationVisitor visitAnnotation(String descriptor, boolean visible) {
-        String name = "com.tms.threadswitch.tsm_android.TsmKit";
+        String name = "com.tms.android.TsmKit";
         name = name.replaceAll("\\.", "/");
         name = String.format("%1s%2s%3s", "L", name, ";");
         name = name.replaceAll(" ", "");
