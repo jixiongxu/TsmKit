@@ -1,0 +1,26 @@
+apply plugin: 'java-library'
+apply plugin: 'maven'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation gradleApi()
+    implementation 'com.android.tools.build:transform-api:1.5.0'
+    implementation 'commons-io:commons-io:2.6'
+    implementation 'com.android.tools.build:gradle:4.0.2'
+    implementation files('libs/asm-7.1.jar')
+    implementation files('libs/asm-commons-7.1.jar')
+}
+
+group = 'com.tms.threadswitch.tsm_plugin'//包名
+version = '1.0.1'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //本地的Maven地址设置为
+            repository(url: uri('../repo'))
+        }
+    }
+}
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

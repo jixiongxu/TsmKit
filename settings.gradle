@@ -1,0 +1,4 @@
+include ':tsm_android'
+include ':tsm_plugin'
+include ':app'
+rootProject.name = "ThreadSwitchSimple"
