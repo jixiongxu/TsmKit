@@ -13,11 +13,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        init();
+        init("onCreate");
     }
 
     @TsmKit(main = true)
-    public void init() {
-        Log.d("MainActivity:", "init" + Thread.currentThread().getName());
+    public void init(String arg) {
+        Log.d("MainActivity:", "init" + Thread.currentThread().getName() + arg);
     }
 }
